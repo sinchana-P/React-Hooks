@@ -1,33 +1,27 @@
 import './App.css';
-import HookCouterOne from './components/HookCouterOne';
-import ClassCounterOne from './components/ClassCounterOne';
-import ClassMouse from './components/ClassMouse';
-import HookMouse from './components/HookMouse';
-import MouseContainer from './components/MouseContainer';
-import IntervalClassComponent from './components/IntervalClassComponent';
-import IntervalHookCounter from './components/IntervalHookCounter';
-import DataFetching from './components/DataFetching'
-import DataFetchingById from './components/DataFetchingById'
-import DataFetchingButton from './components/DataFetchingButton'
+import React from 'react'
+import ComponentC from './components/ComponentE';
+
+// Basic Context in React
+export const UserContext = React.createContext()
+export const ChannelContext = React.createContext()
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <HookCouterOne />
-        <ClassCounterOne /> */}
-        {/* <ClassMouse /> */}
-        {/* <HookMouse /> */}
-        {/* <MouseContainer /> */}
-        {/* <IntervalClassComponent /> */}
-        {/* <IntervalHookCounter /> */}
-
-        {/* <DataFetching /> */}
-        {/* <DataFetchingById /> */}
-        <DataFetchingButton />
+        <UserContext.Provider value={'Sinchana'}>
+          <ChannelContext.Provider value={'Codevolution'}>
+            <ComponentC />
+          </ChannelContext.Provider>
+        </UserContext.Provider>
       </header>
     </div>
   );
 }
 
 export default App;
+
+
+// Note:
+// To send data from App Component to ---> ComponentF
