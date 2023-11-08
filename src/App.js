@@ -1,23 +1,14 @@
 import './App.css';
-import CounterOne from './components/CounterOne';
-import CounterTwo from './components/CounterTwo';
-import CounterThree from './components/CounterThree';
-import DataFetchingOne from './components/DataFetchingOne';
-import DataFetchingTwo from './components/DataFetchingTwo';
+import Counter from './components/Counter';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <CounterOne /> */}
-        {/* <CounterTwo /> */}
-        {/* <CounterThree /> */}
-        {/* <DataFetchingOne /> */}
-        <DataFetchingTwo />
+       <Counter />
       </header>
     </div>
   );
 }
 
 export default App;
-
